@@ -1,0 +1,47 @@
+---
+title: Installation
+description: How to install rs-mahito on your Windows system.
+---
+
+## Download
+
+Download the latest release from the [GitHub Releases](https://github.com/your-username/rs-mahito/releases) page.
+
+## Manual Installation
+
+1. Download `rs-mahito.exe` from the releases page
+2. Place it in a directory of your choice (e.g., `C:\Tools\rs-mahito`)
+3. Add the directory to your system PATH (optional, for global access)
+
+### Adding to PATH
+
+1. Open System Properties → Advanced → Environment Variables
+2. Under "System variables", find and select "Path"
+3. Click "Edit" → "New"
+4. Add the path to your rs-mahito directory
+5. Click "OK" to save
+
+## Build from Source
+
+If you prefer to build from source, you'll need Rust installed:
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/rs-mahito.git
+cd rs-mahito
+
+# Build release binary
+cargo build --release
+
+# The binary will be at target/release/rs-mahito.exe
+```
+
+## Verify Installation
+
+Open a terminal and run:
+
+```bash
+rs-mahito --version
+```
+
+You should see the version number if the installation was successful.

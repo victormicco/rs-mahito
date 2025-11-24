@@ -1,0 +1,55 @@
+---
+title: Introduction
+description: Learn about rs-mahito, a Windows CLI tool for removing metadata from files on NTFS filesystems.
+---
+
+import { Callout } from 'fumadocs-ui/components/callout';
+
+**rs-mahito** is a Windows CLI tool for removing metadata from files on NTFS filesystems. It clears privacy-sensitive information like Zone.Identifier streams, file timestamps, Office document properties, and file ownership.
+
+<div className="my-8 flex justify-center">
+  <img src="/mahito-smirk.jpg" alt="Mahito" className="rounded-xl w-64 opacity-90 shadow-lg" />
+</div>
+
+## Features
+
+- **Zone Identifier Removal**: Clears the Zone.Identifier alternate data stream that marks files as downloaded from the internet
+- **Timestamp Reset**: Resets file timestamps to January 1, 2000, removing temporal metadata
+- **Owner Clearing**: Removes file ownership information via SID manipulation
+- **Office Document Cleaning**: Strips metadata from Office Open XML documents (docx, xlsx, pptx)
+- **Batch Processing**: Process entire directories recursively
+- **Dry Run Mode**: Preview changes before applying them
+
+## Why rs-mahito?
+
+When you download files from the internet, Windows adds metadata that can reveal:
+
+- When the file was downloaded
+- Where it was downloaded from
+- Who owns the file
+- Document author information (for Office files)
+
+rs-mahito helps you clean this metadata while preserving the actual file content.
+
+<Callout type="info">
+  rs-mahito is named after Mahito from Jujutsu Kaisen, whose ability to manipulate souls mirrors how this tool manipulates file metadata.
+</Callout>
+
+## Quick Start
+
+```bash
+# Clean a single file
+rs-mahito file path/to/file.pdf
+
+# Clean a directory
+rs-mahito dir path/to/folder
+
+# Clean recursively
+rs-mahito recursive path/to/folder
+```
+
+## Requirements
+
+- Windows 10 or later
+- NTFS filesystem
+- Administrator privileges (for some operations)

@@ -1,7 +1,6 @@
 # Rust
 /target/
 **/*.rs.bk
-Cargo.lock
 
 # IDE
 .idea/
@@ -17,3 +16,35 @@ Thumbs.db
 # Test files
 test_*.txt
 test_dir/
+
+# Node.js
+node_modules/
+.pnpm-store/
+
+# Next.js
+.next/
+out/
+.vercel
+
+# Fumadocs
+.source/
+
+# Turborepo
+.turbo/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build outputs
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# TypeScript
+*.tsbuildinfo

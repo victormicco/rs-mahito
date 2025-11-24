@@ -1,0 +1,75 @@
+{
+	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+	"css": {
+		"parser": {
+			"cssModules": true
+		}
+	},
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "double"
+		}
+	},
+	"json": {
+		"parser": {
+			"allowComments": true
+		}
+	},
+	"organizeImports": {
+		"enabled": true
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"suspicious": {
+				"noConsole": {
+					"level": "warn",
+					"options": {
+						"allow": ["info", "warn", "error"]
+					}
+				}
+			},
+			"correctness": {
+				"noUnusedImports": "warn"
+			},
+			"style": {
+				"noDefaultExport": "error",
+				"useFilenamingConvention": {
+					"level": "error",
+					"options": {
+						"filenameCases": ["kebab-case"]
+					}
+				}
+			}
+		}
+	},
+	"overrides": [
+		{
+			"include": [
+				"*.config.*",
+				"next.config.*",
+				"postcss.config.*",
+				"tailwind.config.*",
+				"source.config.*"
+			],
+			"linter": {
+				"rules": {
+					"style": {
+						"noDefaultExport": "off"
+					}
+				}
+			}
+		},
+		{
+			"include": ["src/app/**/*"],
+			"linter": {
+				"rules": {
+					"style": {
+						"noDefaultExport": "off"
+					}
+				}
+			}
+		}
+	]
+}

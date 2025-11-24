@@ -1,0 +1,92 @@
+---
+title: Commands
+description: Complete reference for all rs-mahito commands.
+---
+
+## file
+
+Clean metadata from a single file.
+
+```bash
+rs-mahito file [options] <path>
+```
+
+### Options
+
+- `--dry-run`: Preview changes without applying
+- `--verbose`: Show detailed output
+- `--yes`: Skip confirmation prompts
+
+### Example
+
+```bash
+rs-mahito file --verbose ~/Downloads/report.pdf
+```
+
+---
+
+## dir
+
+Clean metadata from all files in a directory (non-recursive).
+
+```bash
+rs-mahito dir [options] <path>
+```
+
+### Options
+
+- `--dry-run`: Preview changes without applying
+- `--verbose`: Show detailed output
+- `--yes`: Skip confirmation prompts
+
+### Example
+
+```bash
+rs-mahito dir --dry-run ./documents
+```
+
+---
+
+## recursive
+
+Clean metadata from all files in a directory tree.
+
+```bash
+rs-mahito recursive [options] <path>
+```
+
+### Options
+
+- `--dry-run`: Preview changes without applying
+- `--verbose`: Show detailed output
+- `--yes`: Skip confirmation prompts
+
+### Example
+
+```bash
+rs-mahito recursive --yes ./project
+```
+
+---
+
+## info
+
+Display metadata information about a file without modifying it.
+
+```bash
+rs-mahito info <path>
+```
+
+### Example
+
+```bash
+rs-mahito info document.docx
+```
+
+### Output
+
+Shows information about:
+- Zone.Identifier presence
+- File timestamps
+- File owner
+- Office document properties (if applicable)

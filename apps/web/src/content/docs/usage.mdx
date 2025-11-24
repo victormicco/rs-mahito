@@ -1,0 +1,76 @@
+---
+title: Usage
+description: Learn how to use rs-mahito to clean metadata from your files.
+---
+
+rs-mahito provides several commands for cleaning metadata from files and directories.
+
+## Basic Usage
+
+```bash
+rs-mahito <command> [options] <path>
+```
+
+## Global Options
+
+| Option | Description |
+|--------|-------------|
+| `--dry-run` | Preview changes without applying them |
+| `--verbose` | Show detailed output |
+| `--yes` | Skip confirmation prompts |
+| `--admin` | Run with administrator privileges |
+
+## Examples
+
+### Clean a Single File
+
+```bash
+# Basic usage
+rs-mahito file document.pdf
+
+# With dry run to preview changes
+rs-mahito file --dry-run document.pdf
+
+# With verbose output
+rs-mahito file --verbose document.pdf
+```
+
+### Clean a Directory
+
+```bash
+# Clean all files in a directory (non-recursive)
+rs-mahito dir ./downloads
+
+# Clean with confirmation skip
+rs-mahito dir --yes ./downloads
+```
+
+### Recursive Cleaning
+
+```bash
+# Clean all files recursively
+rs-mahito recursive ./project
+
+# Dry run recursive clean
+rs-mahito recursive --dry-run ./project
+```
+
+### View File Info
+
+```bash
+# Show metadata information about a file
+rs-mahito info document.pdf
+```
+
+## What Gets Cleaned
+
+| Metadata Type | Description |
+|--------------|-------------|
+| Zone.Identifier | Alternate data stream marking files as downloaded |
+| Timestamps | Created, modified, and accessed times |
+| File Owner | NTFS file ownership (SID) |
+| Office Properties | Author, title, comments in docx/xlsx/pptx |
+
+<div className="mt-12 flex justify-center">
+  <img src="/mahito-happy.jpg" alt="Clean files, happy life" className="rounded-xl w-48 opacity-80" />
+</div>
