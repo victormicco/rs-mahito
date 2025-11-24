@@ -390,9 +390,7 @@ fn format_system_time(time: std::time::SystemTime) -> String {
     match time.duration_since(UNIX_EPOCH) {
         Ok(duration) => {
             let secs = duration.as_secs();
-            // Simple timestamp formatting
-            let datetime = chrono_lite(secs);
-            datetime
+            chrono_lite(secs)
         }
         Err(_) => "(invalid time)".to_string(),
     }
