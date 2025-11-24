@@ -2,6 +2,9 @@
 
 A CLI tool to clear metadata from files on Windows NTFS filesystems.
 
+<img width="1200" height="540" alt="image" src="https://github.com/user-attachments/assets/b0369fbd-7a2a-4330-a09b-8109e959b700" />
+
+
 ## Features
 
 - **NTFS Alternate Data Streams** - Removes Zone.Identifier and other ADS that track file origin
